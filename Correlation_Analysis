@@ -1,0 +1,21 @@
+
+#Correlation with MEI
+for(i in 1:4)
+{
+  Y = Station_S_ANM[, i]
+  X1 = Station_S_ANM[,i+4]
+  CorMEI = cor(Y,X1)
+  CorMEI = cor.test(Y,X1)
+  print(CorMEI)
+}
+
+## Correlation with DMI
+for(i in 1:4)
+{
+  X2 = Station_S_ANM[,i+8]
+  Y = Station_S_ANM[, i]
+  CorDMI = cor(Y,X2)
+  CorDMI = cor.test(Y,X2)
+  print(CorDMI)
+}
+
